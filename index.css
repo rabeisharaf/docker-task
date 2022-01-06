@@ -1,0 +1,121 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* home */
+.home {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  min-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.home .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  padding: 3rem 1.5rem;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes apperance {
+  0% {
+    transform: scale(0%, 0%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.card .item {
+  transition: all linear 0.4s;
+  animation: apperance 2s;
+}
+.item_head,
+.item_price,
+.item_info,
+.item_buy {
+  width: 100%;
+  color: aliceblue;
+  text-transform: capitalize;
+}
+.item_head {
+  color: orange;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 9px;
+  transform: translate(10px);
+  transition: all linear 0.4s;
+  animation: apperance 3s;
+}
+.item_price {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  transition: all linear 0.4s;
+  transform: translate(100px);
+  animation: apperance 3s;
+}
+.item_info {
+  width: 100%;
+  color: rgba(184, 178, 167, 0.9);
+  font-size: 1rem;
+  margin-top: 40px;
+  margin-bottom: 9px;
+  text-align: left;
+  transition: all linear 0.4s;
+  display: none;
+}
+.card button {
+  padding: 0.7rem 1.5rem;
+  background: rgba(255, 157, 66, 0.8);
+  border: none;
+  border-radius: 4px;
+  color: aliceblue;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  display: none;
+  transition: all linear 0.4s;
+}
+.card:hover .item {
+  transform: translate(-20px, -130px) rotateZ(-30deg);
+}
+.card:hover .item_head {
+  margin: 0%;
+  transform: translate(0px, -50px);
+}
+.card:hover .item_price {
+  margin: 0%;
+  transform: translate(0px, -50px);
+}
+.card:hover .item_info {
+  display: inline-block;
+  margin: 0%;
+  transform: translate(0px, -30px);
+  animation: oo 3s;
+}
+.card:hover button {
+  display: inline-block;
+  margin: 0%;
+  transform: translate(0px, -10px);
+  animation: oo 3s;
+}
+@keyframes oo {
+  0% {
+    opacity: 0;
+  }
+}
+/* end of home */ ;
